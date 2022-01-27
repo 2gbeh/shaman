@@ -85,17 +85,21 @@
   background-color: #333;
 }
 
-.admin main .content form .thumbnail {
+.admin main .content form .image-group {
+  text-align: center;
+}
+.admin main .content form .image-group .thumbnail {
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: scroll;
   background-size: cover;
   border-bottom: solid thin #ddd;
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
+  border: solid thin #ccc;
+  display: inline-block;
 }
-
 /* responsive design */
 @media only screen and (max-width: 1280px) {
 
