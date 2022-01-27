@@ -4,6 +4,9 @@ header {
   padding: 8px 20px;
   background-color: #222;
 }
+header sup {
+  display: none;
+}
 header table tr th {
   text-align: left;
   width: 1px;
