@@ -1,0 +1,25 @@
+{
+  "name": "Shaman",
+  "short_name": "Shaman",  
+  "description": "Technology trends from around the multiverse",
+  "background_color": "#ffffff",
+  "theme_color": "#222222",
+  "start_url": "index.html",
+  "scope": "/",  
+  "display": "standalone",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/img/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/msapplication-tile-image.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

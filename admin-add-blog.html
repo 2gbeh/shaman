@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- META TAGS -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+  <!-- CSS LIBRARY -->
+  <link type="text/css" href="./css/shared.css" rel="stylesheet" />  
+  <link type="text/css" href="./css/layout.css" rel="stylesheet" />
+  <link type="text/css" href="./css/admin.css" rel="stylesheet" />
+  <link type="text/css" href="./css/forms.css" rel="stylesheet" />
+  <link type="text/css" href="./css/theme.css" rel="stylesheet" />  
+  <!-- JS LIBRARY -->
+  <script type="text/javascript" src="./js/event-handler.js"></script>
+  <title>Shaman | Add Blog</title>
+</head>
+<body class="admin" id="top" onload="cloneSelector('main .content tbody')">
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+<header>
+  <div class="container">
+    <table border="0">
+      <tr>
+        <th>
+          <a href="index.html" title="Home">
+            <img src="./img/typeface.png" alt="Shaman" />
+            <sup>&reg;</sup>
+          </a>
+        </th>
+        <td>
+          <ul>
+            <li>
+              <a onclick="handleLogout()">Log out</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <table border="0" class="desktop">
+      <tr>
+        <th>
+          <ul>
+            <li>
+              <a href="#admin-dashboard.html">
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="admin-view-blogs.html">
+                View Blogs [25]
+              </a>
+            </li>            
+            <li>
+              <a href="admin-add-blog.html">
+                Add Blog
+              </a>
+            </li>
+          </ul>
+        </th>
+        <td>
+          <ul>
+            <li>
+              <a href="index.html" target="_blank" title="Visit Website">
+                <img src="./img/ico-globe.png" width="32" alt="Visit Website" />
+              </a>
+            </li>
+            <li>
+              <a href="admin-account.html" title="My Account">
+                <img src="./img/ico-user-circle.png" width="30" alt="Account:" />
+                <b>Webmaster</b>
+              </a>
+            </li>
+          </ul>          
+        </td>
+      </tr>
+    </table>
+
+    <table border="0" class="mobile">
+      <tr>
+        <th>
+          <a href="admin-account.html" title="My Account">
+            <img src="./img/ico-user-circle.png" width="30" alt="Account:" />
+            <b>Webmaster</b>
+          </a>        
+        </th>
+        <td>
+          <u title="Menu" onclick="toggleDrawer(this, '#drawer')">&equiv;</u>
+        </td>        
+      </tr>
+    </table>    
+  </div>
+</nav>
+
+<div class="drawer" id="drawer">
+  <ul>
+    <li>
+      <a href="#admin-dashboard.html">
+        Dashboard
+      </a>
+    </li>  
+    <li>
+      <a href="admin-view-blogs.html">
+        View Blogs [25]
+      </a>
+    </li>            
+    <li>
+      <a href="admin-add-blog.html">
+        Add Blog
+      </a>
+    </li>
+    <li>
+      <a href="index.html" target="_blank">
+        Visit Website
+      </a>
+    </li>    
+  <ul>
+</div>
+
+<div class="notice" id="notice">
+  <table border="0">
+    <tr>
+      <th>
+        <i>&#128276;</i>
+        <p>You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</p>
+      </th>
+      <td>
+        <a title="Hide" onclick="document.querySelector('#notice').style.display='none'">&times;</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<main>
+  <div class="container">
+    
+    <section class="breadcrumb">          
+      <table border="0">
+        <tr>
+          <th>    
+            <h1>Add Blog</h1>
+            <a href="">Home</a> &#10095;
+            <a href="admin-add-blog.html">Add Blog</a>
+          </th>
+          <td>
+            <input type="button" onclick="window.location.href=''" value="Refresh" />
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="content">
+      <form action="" method="POST" autocomplete="off" enctype="multipart/form-data">
+        <p class="field-group">
+          <label for="passport">Passport Photo</label>
+          <input type="file" name="passport" id="passport" accept="image/*" required />
+        </p>
+
+        <p class="field-group">
+          <label for="names">Full name</label>
+          <input type="search" name="names" value="" id="names" placeholder="Surname first" required />
+        </p>
+        
+        <fieldset class="radio-group">
+          <legend>Gender</legend>
+          <p>
+            <input type="radio" name="sex" id="male" value="m" required />
+            <label for="male">Male</label>   
+          </p>
+          <p>
+            <input type="radio" name="sex" id="female" value="f" required />
+            <label for="female">Female</label>          
+          </p>        
+        </fieldset>
+        
+        <p class="field-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" value="" id="dob" placeholder="Ex. YYYY-MM-DD" required />
+        </p>
+
+        <p class="field-group">
+          <label for="status">Marital Status</label>
+          <select name="status" id="status" required>
+            <option></option>
+            <option>Single</option>
+            <option>Married</option>
+            <option>Separated</option>
+            <option>Divorced</option>
+            <option>Widowed</option>
+            <option>Other</option>
+          </select>
+        </p>        
+        
+        <p class="field-group">
+          <label for="age">Age</label>
+          <input type="number" name="age" value="" id="age" placeholder="" min="0" required />
+        </p>
+        
+        <p class="field-group">
+          <label for="bmi">Body Mass Index (BMI)</label>
+          <input type="number" name="bmi" value="" id="bmi" placeholder="Ex. 18.5 ~ 24.9" required />        
+        </p>
+        
+        <p class="field-group">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" value="" id="email" placeholder="Ex. example@domain.com" required />
+        </p>
+        
+        <p class="field-group">
+          <label for="tel">Telephone No.</label>
+          <input type="tel" name="tel" value="" id="tel" placeholder="Ex. +(123)456-7890" required />
+        </p>
+        
+        <p class="field-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" value="" id="username" placeholder="" required />
+        </p>
+        
+        <p class="field-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" value="" id="password" placeholder="" ondblclick="togglePassword()" required />
+        </p>
+        
+        <p class="field-group">
+          <label for="address">Home Address</label>
+          <textarea name="address" id="address" placeholder="" required></textarea>
+        </p>
+        
+        <p class="checkbox-group">          
+          <input type="checkbox" name="terms" value="" id="terms" required />
+          <label for="terms">I agree to terms and policy.</label>
+        </p>        
+        
+        <p class="button-group">
+          <button type="reset">Clear</button>
+          <button type="submit">Save</button>
+        </p>
+      </form>
+    </section> 
+
+  </div>
+</main>
+
+<footer id="end">
+  <div class="container wrapper">
+    <table border="0">
+      <tr>
+        <th>
+          <ul>
+            <li>
+              <a href="#top" title="TOP">
+                <img src="./img/logo.png" alt="Shaman" />
+              </a>
+            </li>
+            <li>
+              <address>&copy 2022 HWP Labs. <cite>CRBN 658815.</cite></address>
+            </li>
+          </ul>
+        </th>
+        <td>
+          <ul>
+            <li>
+              <a href="#" title="Like us on Facebook">
+                <img src="./img/sm-fb.png" alt="Facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Follow us on Twitter">
+                <img src="./img/sm-tw.png" alt="Twitter" />
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Follow us on Instagram">
+                <img src="./img/sm-ig.png" alt="Instagram" />
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Subscribe to our YouTube Channel">
+                <img src="./img/sm-yt.png" alt="Twitter" />
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Chat us on WhatsApp">
+                <img src="./img/sm-wa.png" alt="Instagram" />
+              </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</footer>
+
+</body>
+</html>
